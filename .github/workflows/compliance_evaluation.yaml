@@ -14,7 +14,6 @@ on:
         required: false
         type: boolean
         default: false
-
 permissions:
   contents: read
   actions: none
@@ -30,7 +29,7 @@ jobs:
       security-events: write
       id-token: write
       attestations: write
-    uses: marcusburghardt/github-standards/.github/workflows/reusable_compliance.yml@main
+    uses: complytime/org-infra/.github/workflows/reusable_compliance.yml@update_reusable_compliance_ci
     with:
       policy_url: ${{ inputs.policy_url }}
       push_attestation: ${{ inputs.push_attestation }}
